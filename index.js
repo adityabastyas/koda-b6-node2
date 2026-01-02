@@ -7,7 +7,8 @@
 
 // format("DD/MM/YYYY");
 
-// import moment from "moment";
+const moment = require("moment");
+
 const convertTanggal = (waktu) => {
   if (
     waktu.length !== 10 ||
@@ -18,18 +19,8 @@ const convertTanggal = (waktu) => {
     console.log("format tidak falid");
   }
 
-  // let tanggal = moment(waktu, "DD-MM-YYYY", true)
-  // if(!tanggal)
-
-  let k = "";
-  for (let i = 0; i < waktu.length; i++) {
-    if (waktu[i] === "-") {
-      k = k + "/";
-    } else {
-      k = k + waktu[i];
-    }
-  }
-  console.log(k);
+  let tanggal = moment(waktu, "DD-MM-YYYY", true).format("DD/MM/YYYY");
+  console.log(tanggal);
 };
 
 convertTanggal("01-01-2026");
