@@ -7,7 +7,8 @@
 
 // format("DD/MM/YYYY");
 
-const moment = require("moment");
+// const moment = require("moment");
+import moment from "moment";
 
 const convertTanggal = (waktu) => {
   if (
